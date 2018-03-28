@@ -1,0 +1,36 @@
+{
+  "name": "ml",
+  "version": "1.0.0",
+  "description": "Machine Learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "DB_HOST=127.0.0.1 DB_NAME=ml_test mocha -r ts-node/register ./test/*.ts --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/IngaBorg/ml"
+  },
+  "keywords": [
+    "machine-learning",
+    "ml",
+    "typescript",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "VicoErv",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^5.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "mongoose": "^5.0.12",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.0.9",
+    "@types/mongoose": "^5.0.7",
+    "@types/node": "^9.6.0"
+  }
+}
