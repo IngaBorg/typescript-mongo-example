@@ -1,6 +1,7 @@
 import DB, { Options } from './Model/DB';
 import MyUniform from './Interface/MyUniform';
 
+
 export default class Uniform implements MyUniform {
   color: StringConstructor;
   type: StringConstructor;
