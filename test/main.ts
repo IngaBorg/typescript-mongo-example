@@ -3,6 +3,7 @@ import 'mocha';
 
 import Uniform from '../src/Uniform';
 import MyUniform from '../src/Interface/MyUniform';
+import Util from '../lib/util';
 
 describe('insert', () => {
   it ('should insert c`s', (done) => {
@@ -28,5 +29,21 @@ describe('insert', () => {
       .catch(function (error) {
         done(error);
       })
-  }).timeout(10000)
+  }).timeout(10000);
+
+  it ('should ask user input', (done) => {
+    let util = new Util();
+
+    util.ask('Color? ')
+      .then(function (resp) {
+        return util.ask('type? ');
+      })
+      .then(function(resp) {
+        console.log(resp);
+        done();
+      })
+      .catch(function (error) {
+        done(error);
+      })
+  }).timeout(0);
 })
